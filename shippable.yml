@@ -8,6 +8,7 @@ node_js:
 env:
   global:
     - FOO=FUBU
+    - BAR=FOTU
 
   matrix:
     - M1=ONE
