@@ -29,6 +29,12 @@ build:
 
   post_ci:
     - docker push shippabledocker/shiphitchcock1_sample_node
+    
+branches:
+  except:
+    - preci
+    - postci
+    - exclude
 
 integrations:
   hub:
