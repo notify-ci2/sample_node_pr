@@ -27,7 +27,7 @@ integrations:
         - shiphitchcock1@gmail.com
         #- varsha@shippable.com
       on_pr: always
-      on_start:
+      on_start: always
       on_success: always
       on_failure: always
 
@@ -36,7 +36,7 @@ integrations:
       recipients:
         - shiphitchcock1@gmail.com
       on_pr: always
-      on_start:
+      on_start: always
       on_success: always
       on_failure: always
  
@@ -45,6 +45,6 @@ integrations:
       recipients: 
         - "chat.freenode.net#test-cock"
       on_pr: always
-      on_start:
+      on_start: always
       on_success: always
       on_failure: always  
