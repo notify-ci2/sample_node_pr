@@ -26,7 +26,7 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
         #- varsha@shippable.com
-      on_pr: never
+      on_pull_request: always
       on_start: always
       on_success: always
       on_failure: always
@@ -36,16 +36,16 @@ integrations:
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
-      on_pr: never
+      on_pr: always
       on_start: always
       on_success: always
-      on_failure:
+      on_failure: always
  
     - integrationName: irc
       type: irc
       recipients: 
         - "chat.freenode.net#test-cock"
-      on_pr: never
+      on_pr: always
       on_start: always
       on_success: always 
-      on_failure:     
+      on_failure: always   
