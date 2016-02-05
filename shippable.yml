@@ -48,4 +48,4 @@ integrations:
       on_pr: never
       on_start: always
       on_success: always 
-      on_failure:    
+      on_failure:     
