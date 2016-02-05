@@ -26,7 +26,7 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
         #- varsha@shippable.com
-      on_pull_request: never 
+      on_pull_request: always
       on_start: always
       on_success: always
       on_failure: always
@@ -36,7 +36,7 @@ integrations:
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
-      on_pull_request: never
+      on_pull_request: always
       on_start: always
       on_success: always
       on_failure: always
@@ -45,7 +45,7 @@ integrations:
       type: irc
       recipients: 
         - "chat.freenode.net#test-cock"
-      on_pull_request: never
+      on_pull_request: always
       on_start: always
       on_success: always 
       on_failure: always   
