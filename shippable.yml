@@ -14,26 +14,38 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_sample_node .
-
-  pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock1_sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
     - ls -al
-
-  post_ci:
-    - docker push shippabledocker/shiphitchcock1_sample_node
-
+  
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      branches:
-        only:
-          - master
+  notifications:
+    - integrationName: email
+      type: email
+      recipients: 
+        - shiphitchcock1@gmail.com
+        #- varsha@shippable.com
+      on_pr: never
+      on_start: always
+      on_success: always
+      on_failure: always
+
+    - integrationName: ship-slack
+      type: slack
+      recipients:
+        - "#hitchcock1-public"
+        - pvt-channel
+      on_pr: never
+      on_start: always
+      on_success: always
+      on_failure:
+ 
+    - integrationName: irc
+      type: irc
+      recipients: 
+        - "chat.freenode.net#test-cock"
+      on_pr: never
+      on_start: always
+      on_success: always 
+      on_failure:     
